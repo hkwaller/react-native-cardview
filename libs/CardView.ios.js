@@ -13,6 +13,7 @@ export default class CardView extends Component {
           },
           shadowRadius: cardElevation,
           shadowOpacity: 0.24,
+          shadowColor: '#00000033',
           borderRadius: cornerRadius,
         }, this.props.style]}>
           {this.props.children}
