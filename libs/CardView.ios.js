@@ -3,7 +3,7 @@ import { View } from 'react-native';
 
 export default class CardView extends Component {
   render() {
-    const { cardElevation, cornerRadius } = this.props;
+    const { cardElevation, cornerRadius = 0 } = this.props;
     if(cardElevation > 0) {
       return(
         <View style={[{
@@ -12,9 +12,9 @@ export default class CardView extends Component {
             height: cardElevation
           },
           shadowRadius: cardElevation,
-          shadowOpacity: 0.24,
           shadowColor: '#00000033',
           borderRadius: cornerRadius,
+          shadowOpacity: 5,
         }, this.props.style]}>
           {this.props.children}
         </View>
